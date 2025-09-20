@@ -85,7 +85,7 @@ sudo make install
 ```
 
 **Proof:** Screenshot of successful installation
-![Yosys Installation](Images/yosys_installation_done.jpeg)
+![Yosys Installation](yosys.png)
 
 ---
 
@@ -98,7 +98,7 @@ iverilog -v
 ```
 
 **Proof:** Screenshot of verification
-![Iverilog Verification](Images/iverilog_status.png)
+![Iverilog Verification](iverilog.png)
 
 ---
 
@@ -111,7 +111,7 @@ gtkwave --version
 ```
 
 **Proof:** Screenshot of verification
-![GTKWave Verification](Images/gtkwave_installation_done.jpeg)
+![GTKWave Verification](gtkwave.png)
 
 ---
 
@@ -128,7 +128,7 @@ sudo make install
 ```
 
 **Proof:** Screenshot of running a sample simulation
-
+![NGSpice Verification](ngspice.png)
 ---
 
 ### 5️⃣ Magic VLSI (Layout Editor)
@@ -144,6 +144,7 @@ sudo make install
 ```
 
 **Proof:** Screenshot of Magic running successfully
+![GTKWave Verification](magic.png)
 
 ---
 
