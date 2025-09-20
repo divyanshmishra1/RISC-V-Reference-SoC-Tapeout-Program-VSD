@@ -1,13 +1,34 @@
-Absolutely! Here’s a **complete, polished, ready-to-use README.md** for your GitHub repo documenting **Week 0** tasks and tool installations. You can copy this directly into your repository:
 
----
+# 🖥️ RISC-V SoC Tapeout Program VSD
 
-```markdown
-# 🚀 RISC-V SoC Tapeout Program (VSD) — Week 0
+<div align="center">
 
-This repository documents my **Week 0 progress** for the **RISC-V Reference SoC Tapeout Program (VSD)**, including GitHub setup, tool installations, and proofs of successful configuration.  
+![RISC-V](https://img.shields.io/badge/RISC--V-SoC%20Tapeout-blue?style=for-the-badge&logo=riscv)
+![VSD](https://img.shields.io/badge/VSD-Program-orange?style=for-the-badge)
+![Participants](https://img.shields.io/badge/Participants-3500+-success?style=for-the-badge)
+![India](https://img.shields.io/badge/Made%20in-India-saffron?style=for-the-badge)
+
+</div>
+
+Welcome to my journey through the **RISC-V SoC Tapeout Program (VSD)**!  
+
+This repository documents my **Week 0 progress**, including GitHub setup, tool installations, and verification proofs.
+
+<div align="center">
 
 > *"Hands-on journey from RTL design to tapeout using open-source EDA tools while contributing to India’s RISC-V ecosystem."*
+
+</div>
+
+<div align="center">
+
+```
+
+📝 RTL Design → 🔄 Synthesis → 📊 Simulation → ⚡ Verification
+
+```
+
+</div>
 
 ---
 
@@ -15,45 +36,15 @@ This repository documents my **Week 0 progress** for the **RISC-V Reference SoC 
 
 This week focuses on:
 
-1. **Task 1:** GitHub repository creation and documentation of previous video summary.  
-2. **Task 2:** Installing and verifying all required EDA tools using the recommended system configuration.
+ **Task:** Installing and verifying core EDA tools for RTL design and simulation.
 
 ---
 
-## 📝 Task 1 — GitHub Repository Setup
 
-**Objective:** Create a GitHub repository to track progress, assignments, and installation proofs.
+</details>
 
-**Steps Performed:**
-
-1. Created repository: `RISC-V_SoC_Tapeout_Program_VSD`.
-2. Initialized `README.md` with a summary of the previous instructional video.
-3. Structured directories for weekly tasks:
-```
-
-Week0/
-├── Task1\_GitHub\_Setup/
-└── Task2\_Tool\_Installation/
-
-````
-4. Pushed initial commit to GitHub:
-```bash
-git init
-git add .
-git commit -m "Week 0 - Task 1: Repo setup and video summary"
-git branch -M main
-git remote add origin https://github.com/YourUsername/RISC-V_SoC_Tapeout_Program_VSD.git
-git push -u origin main
-````
-
-**Proof:**
-
-* Screenshot of GitHub repository creation.
-* Screenshot of initial commit.
-
----
-
-## 🛠 Task 2 — Tool Installation
+<details>
+<summary><b>🛠️ Task: Tool Installation</b></summary>
 
 **System Requirements:**
 
@@ -67,7 +58,18 @@ git push -u origin main
 
 ---
 
-### 1️⃣ Yosys (RTL Synthesis)
+### 📦 Tools Installed
+
+| Tool            | Purpose                            | Verification |
+| --------------- | ---------------------------------- | ------------ |
+| 🧠 **Yosys**    | RTL Synthesis & Logic Optimization | ✅ Verified   |
+| 📟 **Iverilog** | Verilog Simulation & Compilation   | ✅ Verified   |
+| 📊 **GTKWave**  | Waveform Viewer & Analysis         | ✅ Verified   |
+| ⚡ **Ngspice**   | Analog & Mixed-Signal Simulation   | ✅ Verified   |
+
+---
+
+#### 1️⃣ Yosys (RTL Synthesis)
 
 ```bash
 sudo apt-get update
@@ -84,12 +86,12 @@ make
 sudo make install
 ```
 
-**Proof:** Screenshot of successful installation
-![Yosys Installation](yosys.png)
+**Proof:**
+![Yosys Installation](Screenshots/yosys.png)
 
 ---
 
-### 2️⃣ Iverilog (Verilog Simulation)
+#### 2️⃣ Iverilog (Verilog Simulation)
 
 ```bash
 sudo apt-get update
@@ -97,12 +99,12 @@ sudo apt-get install iverilog
 iverilog -v
 ```
 
-**Proof:** Screenshot of verification
-![Iverilog Verification](iverilog.png)
+**Proof:**
+![Iverilog Verification](Screenshots/iverilog.png)
 
 ---
 
-### 3️⃣ GTKWave (Waveform Viewer)
+#### 3️⃣ GTKWave (Waveform Viewer)
 
 ```bash
 sudo apt-get update
@@ -110,12 +112,12 @@ sudo apt install gtkwave
 gtkwave --version
 ```
 
-**Proof:** Screenshot of verification
-![GTKWave Verification](gtkwave.png)
+**Proof:**
+![GTKWave Verification](Screenshots/gtkwave.png)
 
 ---
 
-### 4️⃣ Ngspice (Analog/Mixed-Signal Simulation)
+#### 4️⃣ Ngspice (Analog & Mixed-Signal Simulation)
 
 ```bash
 tar -zxvf ngspice-37.tar.gz
@@ -127,70 +129,28 @@ make
 sudo make install
 ```
 
-**Proof:** Screenshot of running a sample simulation
-![NGSpice Verification](ngspice.png)
----
-
-### 5️⃣ Magic VLSI (Layout Editor)
-
-```bash
-sudo apt-get install m4 tcsh csh libx11-dev tcl-dev tk-dev \
-libcairo2-dev mesa-common-dev libglu1-mesa-dev libncurses-dev
-git clone https://github.com/RTimothyEdwards/magic
-cd magic
-./configure
-make
-sudo make install
-```
-
-**Proof:** Screenshot of Magic running successfully
-![GTKWave Verification](magic.png)
+**Proof:**
+![NGSpice Verification](Screenshots/ngspice.png)
 
 ---
 
-### 6️⃣ OpenLane (RTL-to-GDSII Flow)
+### 🌟 Key Learnings from Week 0
 
-```bash
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt install -y build-essential python3 python3-venv python3-pip make git
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o \
-/usr/share/keyrings/docker-archive-keyring.gpg
-echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
-https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee \
-/etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt update
-sudo apt install docker-ce docker-ce-cli containerd.io
-sudo docker run hello-world
-sudo groupadd docker
-sudo usermod -aG docker $USER
-sudo reboot
+* **Successfully installed** and verified core open-source EDA tools.
+* **Configured environment** for RTL design, simulation, and synthesis.
+* **Prepared system** for upcoming RTL-to-GDSII experiments.
+* Learned **dependency management** and professional workflow setup.
 
-# After reboot
-docker run hello-world
-git --version
-docker --version
-python3 --version
-python3 -m pip --version
-make --version
-python3 -m venv -h
-
-# Clone and build OpenLane
-cd $HOME
-git clone https://github.com/The-OpenROAD-Project/OpenLane
-cd OpenLane
-make
-make test
-```
-
-**Proof:** Screenshots of Docker, OpenLane setup, and test completion
+</details>
 
 ---
 
-### ✅ Key Takeaways from Week 0
+## 📈 Weekly Progress Tracker
 
-* GitHub repository created and structured for weekly assignments.
-* Core EDA toolchain installed and verified: **Yosys, Iverilog, GTKWave, Ngspice, Magic, OpenLane**.
-* Environment fully configured to begin RTL-to-GDSII experiments.
-* Learned dependency management, VM configuration, and containerized workflows for professional SoC design.
+![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)
+![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
+![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)
+
+---
+
+````
