@@ -1,18 +1,23 @@
+Perfect — you want your **main README** to stay clean and short, just showing an **overview for each week**, while detailed write-ups live inside their own subfolders (like `Week_2/README.md`).
+
+Here’s your updated, concise version 👇
+
+---
 
 # 🖥️ RISC-V SoC Tapeout Program VSD
 
 <div align="center">
 
-![RISC-V](https://img.shields.io/badge/RISC--V-SoC%20Tapeout-blue?style=for-the-badge&logo=riscv)
+![RISC-V](https://img.shields.io/badge/RISC--V-SoC%20Tapeout-blue?style=for-the-badge\&logo=riscv)
 ![VSD](https://img.shields.io/badge/VSD-Program-orange?style=for-the-badge)
 ![Participants](https://img.shields.io/badge/Participants-3500+-success?style=for-the-badge)
 ![India](https://img.shields.io/badge/Made%20in-India-saffron?style=for-the-badge)
 
 </div>
 
-Welcome to my journey through the **RISC-V SoC Tapeout Program (VSD)**!  
+Welcome to my journey through the **RISC-V SoC Tapeout Program (VSD)**!
 
-This repository documents my **Week 0 progress**, including GitHub setup, tool installations, and verification proofs.
+This repository documents my **weekly progress** — from tool installation and digital design basics to SoC functional modeling and beyond.
 
 <div align="center">
 
@@ -23,134 +28,63 @@ This repository documents my **Week 0 progress**, including GitHub setup, tool i
 <div align="center">
 
 ```
-
 📝 RTL Design → 🔄 Synthesis → 📊 Simulation → ⚡ Verification
-
 ```
 
 </div>
 
 ---
 
-## 📅 Week 0 — Overview
+## 📅 Week 0 — Tool Installation & Verification
 
-This week focuses on:
+**Objective:**
+Set up the open-source EDA toolchain required for RTL design, simulation, and verification.
 
- **Task:** Installing and verifying core EDA tools for RTL design and simulation.
+**Highlights:**
 
----
+* Installed and verified: **Yosys**, **Iverilog**, **GTKWave**, **Ngspice**
+* Configured environment for open-source SoC development
+* Verified all installations with screenshots and commands
 
-
-</details>
-
-<details>
-<summary><b>🛠️ Task: Tool Installation</b></summary>
-
-**System Requirements:**
-
-| Parameter | Requirement       |
-| --------- | ----------------- |
-| RAM       | 6 GB              |
-| HDD       | 50 GB             |
-| OS        | Ubuntu 20.04+     |
-| CPU       | 4 vCPU            |
-| VM        | Oracle VirtualBox |
+📘 *Detailed log:* [Week 0 – Tool Setup](Week_0/README.md)
 
 ---
 
-### 📦 Tools Installed
+## 📅 Week 1 — Digital Logic & RTL Fundamentals
 
-| Tool            | Purpose                            | Verification |
-| --------------- | ---------------------------------- | ------------ |
-| 🧠 **Yosys**    | RTL Synthesis & Logic Optimization | ✅ Verified   |
-| 📟 **Iverilog** | Verilog Simulation & Compilation   | ✅ Verified   |
-| 📊 **GTKWave**  | Waveform Viewer & Analysis         | ✅ Verified   |
-| ⚡ **Ngspice**   | Analog & Mixed-Signal Simulation   | ✅ Verified   |
+**Objective:**
+Explore the basics of digital design and RTL concepts.
 
----
+**Focus Areas:**
 
-#### 1️⃣ Yosys (RTL Synthesis)
+* Logic gates and combinational circuits
+* Sequential design and timing basics
+* RTL design flow introduction
 
-```bash
-sudo apt-get update
-git clone https://github.com/YosysHQ/yosys.git
-cd yosys
-sudo apt install make
-sudo apt-get install build-essential clang bison flex \
-libreadline-dev gawk tcl-dev libffi-dev git \
-graphviz xdot pkg-config python3 libboost-system-dev \
-libboost-python-dev libboost-filesystem-dev zlib1g-dev
-git submodule update --init --recursive
-make config-gcc
-make
-sudo make install
-```
-
-**Proof:**
-![Yosys Installation](Screenshots/yosys.png)
+📘 *Detailed log:* [Week 1 – Coming Soon](Week_1/README.md)
 
 ---
 
-#### 2️⃣ Iverilog (Verilog Simulation)
+## 📅 Week 2 — BabySoC Functional Modeling
 
-```bash
-sudo apt-get update
-sudo apt-get install iverilog
-iverilog -v
-```
+**Objective:**
+Understand and simulate the **VSDBabySoC**, a compact learning-oriented RISC-V System-on-Chip.
 
-**Proof:**
-![Iverilog Verification](Screenshots/iverilog.png)
+**Key Concepts:**
 
----
+* RVMYTH RISC-V CPU Core
+* 8× Phase-Locked Loop (PLL) for clock generation
+* 10-bit DAC for digital-to-analog conversion
+* Functional modeling before RTL implementation
 
-#### 3️⃣ GTKWave (Waveform Viewer)
-
-```bash
-sudo apt-get update
-sudo apt install gtkwave
-gtkwave --version
-```
-
-**Proof:**
-![GTKWave Verification](Screenshots/gtkwave.png)
-
----
-
-#### 4️⃣ Ngspice (Analog & Mixed-Signal Simulation)
-
-```bash
-tar -zxvf ngspice-37.tar.gz
-cd ngspice-37
-mkdir release
-cd release
-../configure --with-x --with-readline=yes --disable-debug
-make
-sudo make install
-```
-
-**Proof:**
-![NGSpice Verification](Screenshots/ngspice.png)
-
----
-
-### 🌟 Key Learnings from Week 0
-
-* **Successfully installed** and verified core open-source EDA tools.
-* **Configured environment** for RTL design, simulation, and synthesis.
-* **Prepared system** for upcoming RTL-to-GDSII experiments.
-* Learned **dependency management** and professional workflow setup.
-
-</details>
+📘 *Detailed log:* [Week 2 – BabySoC Fundamentals](Week2/ReadMe.md)
 
 ---
 
 ## 📈 Weekly Progress Tracker
 
 ![Week 0](https://img.shields.io/badge/Week%200-Tools%20Setup-success?style=flat-square)
-![Week 1](https://img.shields.io/badge/Week%201-Coming%20Soon-lightgrey?style=flat-square)
-![Week 2](https://img.shields.io/badge/Week%202-Upcoming-lightgrey?style=flat-square)
+![Week 1](https://img.shields.io/badge/Week%201-In%20Progress-yellow?style=flat-square)
+![Week%202](https://img.shields.io/badge/Week%202-BabySoC%20Modeling-success?style=flat-square)
 
 ---
-
-````
